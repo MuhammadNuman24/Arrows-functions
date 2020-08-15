@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<script>
+
+//code here
+
+function outer() {
+
+console.log('outer this:',this);
+ 
+//const that =this;
+const  inner = (p1,p2) => {
+    return p1+p2
+};
+ console.log(inner(1,2));
+}
+const obj = {
+    id:2,
+    outer: outer,
+};
+
+obj.outer();
+
+</script>
